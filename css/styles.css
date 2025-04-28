@@ -532,6 +532,7 @@ background-color: #404bbf;}
 }
 .footer-form {
   display: flex;
+  gap: 24px;
 }
 .footer-label {
   gap: 24px;
@@ -613,4 +614,8 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
 .backdrop:not(.is-open) .modal {
   transform: translate(-50%, -100%);
 
+}
+.form-telegram {
+  margin-left: 16px; 
+  fill: #ffffff;
 }

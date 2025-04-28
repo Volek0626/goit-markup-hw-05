@@ -602,10 +602,36 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
    0 1px 3px 0 rgba(0, 0, 0, 0.12),
    0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px 24px;
+
  
 }
-.backdrop is-open {
+
+.modal-close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc; 
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+   border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.form-button:hover .button-close,
+.form-button:focus .button-close {
+  background-color: #404bbf; 
+  border: none; 
+}
+.backdrop.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -618,4 +644,20 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
 .form-telegram {
   margin-left: 16px; 
   fill: #ffffff;
+}
+
+.button-close {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.button-title {
+  font-weight: 500;
+  font-size: 16px; 
+  line-height: 1.5; 
+  text-align: center;
+  letter-spacing: 0.02em;
+  color:#2E2F42;
+  margin-bottom: 16px;
+  
 }

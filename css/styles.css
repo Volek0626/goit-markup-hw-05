@@ -633,13 +633,16 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
 .form-button:focus {
   background-color: #404bbf;
 }
+
 .modal-close-button:hover .button-close,
 .modal-close-button:focus .button-close {
   fill: #ffffff;
 }
-.modal-close-button:hover .button-close,
-.modal-close-button:focus .button-close {
-  fill: #ffffff;
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+  background-color: #404bbf; /* зміна фону */
+  border: none;              /* прибираємо бордер */
 }
 .modal-close-button:hover .button-close,
 .modal-close-button:focus .button-close {
@@ -717,9 +720,10 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
 }
-.modal-input:focus + .input-icon {
-  fill: #4D5AE5; 
+.input-wrapper:has(.modal-input:focus) .input-icon {
+  fill: #4D5AE5;
 }
+
 .form-coment {
   margin-bottom: 16px ;
 
@@ -783,13 +787,24 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
   justify-content: center;
   fill: transparent; 
 }
+
 .user_agreement:checked + .checkbox-label .form-checkmark {
   border: none;
-  /* background-color: var(--checked-bg-color); */
+  background-color: var(--checked-bg-color);
   fill: #F4F4FD; 
-  background-color:#404bbf; 
+  background-color:green; 
   
 }
+
+.checkmark-icon {
+  fill: #ffffff;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+.user_agreement:checked + .form-checkmark {
+  background-color: #00cc66; /* Зелений фон */
+}
+
 .accent {
   color: var(--link-color);
 }
@@ -807,5 +822,5 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
   background-color: #4D5AE5;
   border: none; 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
+  margin: 24px auto 0 auto;
 }

@@ -747,6 +747,12 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
   margin-bottom: 24px;
 
 }
+:root {
+  --active-background-color: #404bbf;
+  --link-color: #4d5ae5;
+}
+
+
 
 .checkbox-label {
   font-size: 12px; 
@@ -779,6 +785,27 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
 }
 .user_agreement:checked + .checkbox-label .form-checkmark {
   border: none;
-  background-color: var(--checked-bg-color);
-  fill:  #4d5ae5;; 
+  /* background-color: var(--checked-bg-color); */
+  fill: #F4F4FD; 
+  background-color:#404bbf; 
+  
+}
+.accent {
+  color: var(--link-color);
+}
+.button-send {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4D5AE5;
+  border: none; 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
